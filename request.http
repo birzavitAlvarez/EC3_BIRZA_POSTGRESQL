@@ -24,25 +24,25 @@
 # Al finalizar el examen entregarlo en el siguiente link: https://forms.office.com/r/fdytLW5PHe
 
 @server = http://localhost:8090
-@api = {{server}}/api/ec3
+#@api = {{server}}/api/ec3
 
 ################ Categorias: ################
 ###
-GET {{api}}/categorias
+GET {{server}}/categorias
 ###
-POST {{api}}/categorias
+POST {{server}}/categorias
 Content-Type: application/json
 
 {"nombre": "Instrumentos de Cuerda"}
 ################ Instrumentos: ################
 ###
-GET {{api}}/instrumentos
+GET {{server}}/instrumentos
 ###
-POST {{api}}/instrumentos
+POST {{server}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Guitarra", "categoria": "http://localhost8090/api/ec3/categorias/3"}
+{"nombre": "Guitarra", "categoria": "http://localhost/categorias/1"}
 ###
-GET {{api}}/instrumentos/1/categoria
+GET {{server}}/instrumentos/1/categoria
 ###
-GET {{api}}/instrumentos?sort=nombre,desc
+GET {{server}}/instrumentos?sort=nombre,desc
