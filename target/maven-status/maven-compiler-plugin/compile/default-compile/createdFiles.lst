@@ -1,0 +1,5 @@
+com\birzavit\ec3\DAO\InstrumentoRepository.class
+com\birzavit\ec3\entity\Categoria.class
+com\birzavit\ec3\Ec3Application.class
+com\birzavit\ec3\DAO\CategoriaRepository.class
+com\birzavit\ec3\entity\Instrumento.class
