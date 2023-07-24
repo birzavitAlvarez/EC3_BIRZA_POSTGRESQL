@@ -23,26 +23,28 @@
 # Deben desplegar su aplicación en render
 # Al finalizar el examen entregarlo en el siguiente link: https://forms.office.com/r/fdytLW5PHe
 
-@server = https://birza-ec3ws.onrender.com
-#@api = {{server}}/api/ec3
+@server = http://localhost:8080
+@api = {{server}}/api/ec3
 
 ################ Categorias: ################
 ###
-GET {{server}}/categorias
+GET {{api}}/categorias
 ###
-POST {{server}}/categorias
+POST {{api}}/categorias
 Content-Type: application/json
 
-{"nombre": "Instrumentos de Cuerda"}
+{"nombre": "Instrumentos de Cuerdas"}
 ################ Instrumentos: ################
 ###
-GET {{server}}/instrumentos
+GET {{api}}/instrumentos
 ###
-POST {{server}}/instrumentos
+POST {{api}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Guitarra", "categoria": "http://localhost/categorias/1"}
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
 ###
-GET {{server}}/instrumentos/1/categoria
+GET {{api}}/instrumentos/1/categoria
 ###
-GET {{server}}/instrumentos?sort=nombre,desc
+GET {{api}}/categorias/1/instrumento
+###
+GET {{api}}/instrumentos?sort=nombre,desc
