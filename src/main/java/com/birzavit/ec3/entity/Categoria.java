@@ -8,7 +8,7 @@ import java.util.*;
 public class Categoria {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)//SEQUENCE
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     @Column(name = "id_categoria",nullable = false)
     private Integer id;
 
@@ -17,7 +17,7 @@ public class Categoria {
 
     // relacion uno a muchos
     @OneToMany(targetEntity = Instrumento.class, mappedBy = "categoria")
-    //@OrderBy("nombre ASC")
+    @OrderBy("nombre ASC")
     private Set<Instrumento> instrumento = new HashSet<Instrumento>();
 
     public Categoria() {
