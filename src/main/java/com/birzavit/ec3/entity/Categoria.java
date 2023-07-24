@@ -17,7 +17,6 @@ public class Categoria {
 
     // relacion uno a muchos
     @OneToMany(targetEntity = Instrumento.class, mappedBy = "categoria")
-    @OrderBy("nombre ASC")
     private Set<Instrumento> instrumento = new HashSet<Instrumento>();
 
     public Categoria() {
